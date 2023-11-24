@@ -10,7 +10,7 @@ describe('CA02 - Ingresar con credenciales invalidas en GitHub', () => { //Nombr
     })
   
     //Login erróneo GitHub
-    it('Ingresar con credenciales validas en GitHub', () => {
+    it('Ingresar con credenciales erroneas en GitHub', () => {
       cy.visit('https://github.com/login')            //URL login GitHub
       cy.get('[for="login_field"]')                   //Campo Usuario
       cy.get('#login_field').type("usuarioX")         //Input U
