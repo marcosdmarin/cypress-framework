@@ -13,8 +13,7 @@ describe('CA01 - Ingresar exitosamente en GitHub', () => { //Nombre del Caso de 
   it('Ingresar con credenciales validas en GitHub', () => {
     cy.visit('https://github.com/login')            //URL login GitHub
     cy.get('[for="login_field"]')                   //Campo Usuario
-    cy.xpath('/html/body/div[1]/div[3]/main/div/div[3]/form/input[2]').type("marcosdmarin")
-    //cy.get('#login_field').type("marcosdmarin")     //Input U
+    cy.get('#login_field').type("marcosdmarin")     //Input U
     cy.get('#forgot-password')                      //Btn Olv Contraseña
     cy.get('.position-relative > label')            //Campo Contraseña
     cy.get('#password').type("Md21156365")          //Input P
