@@ -3,21 +3,22 @@ describe('CA01 - Ingresar exitosamente en GitHub', () => { //Nombre del Caso de 
 
   //Validación de elementos en interfaz principal GitHub
   it('Validar interfaz de GitHub', () => {
-    cy.visit('https://github.com/login')
-    cy.get('.container').should("be.visible")
-    cy.get('h1').contains("Sign in to GitHub")           //Título de página Sign in to GitHub
+    cy.visit('https://refactor.qa.idnowlab.com/id-now-admin/app.html?v=20200508#!/login')
+    cy.get('[name="form.loginUserForm"] > .card-block > h1').should("be.visible")
+    //cy.get('h1').contains("Sign in to GitHub")           //Título de página Sign in to GitHub
 
   })
 
   //Login GitHub
   it('Ingresar con credenciales validas en GitHub', () => {
-    cy.visit('https://github.com/login')            //URL login GitHub
-    cy.get('[for="login_field"]')                   //Campo Usuario
-    cy.get('#login_field').type("marcosdmarin")     //Input U
-    cy.get('#forgot-password')                      //Btn Olv Contraseña
-    cy.get('.position-relative > label')            //Campo Contraseña
-    cy.get('#password').type("Md21156365")          //Input P
-    cy.get('.position-relative > .btn').click()     //Btn Sign in
+    cy.visit('https://refactor.qa.idnowlab.com/id-now-admin/app.html?v=20200508#!/login') 
+    //cy.xpath('/html/body/ui-view/ui-view/div/div/div/div/div/div/form[1]/div/div[1]/input')           //URL login GitHub
+    //cy.get('[for="login_field"]')                   //Campo Usuario
+    //cy.get('#login_field').type("marcosdmarin")     //Input U
+    //cy.get('#forgot-password')                      //Btn Olv Contraseña
+    //cy.get('.position-relative > label')            //Campo Contraseña
+    //cy.get('#password').type("Md21156365")          //Input P
+    //cy.get('.position-relative > .btn').click()     //Btn Sign in
 
   //Ingreso exitoso en Home GitHub
     cy.get('.AppHeader-context-item-label').should("be.visible")          //Texto Dashboard
