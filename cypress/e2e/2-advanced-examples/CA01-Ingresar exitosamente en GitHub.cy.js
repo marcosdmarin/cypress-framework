@@ -3,7 +3,7 @@ describe('CA01 - Ingresar exitosamente en GitHub', () => { //Nombre del Caso de 
 
   //Validación de elementos en interfaz principal GitHub
   it('Validar interfaz de GitHub', () => {
-    cy.visit('https://www.google.com/')
+    cy.visit('https://www.as.com/')
     cy.get('[name="form.loginUserForm"] > .card-block > h1').should("be.visible")
     //cy.get('h1').contains("Sign in to GitHub")           //Título de página Sign in to GitHub
 
@@ -11,7 +11,7 @@ describe('CA01 - Ingresar exitosamente en GitHub', () => { //Nombre del Caso de 
 
   //Login GitHub
   it('Ingresar con credenciales validas en GitHub', () => {
-    cy.visit('https://refactor.qa.idnowlab.com/id-now-admin/app.html?v=20200508#!/login') 
+    cy.visit('https://www.as.com/') 
     //cy.xpath('/html/body/ui-view/ui-view/div/div/div/div/div/div/form[1]/div/div[1]/input')           //URL login GitHub
     //cy.get('[for="login_field"]')                   //Campo Usuario
     //cy.get('#login_field').type("marcosdmarin")     //Input U
